@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83572F8A-0568-4EF0-94C4-BED3E9AB7CAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Car_rental_system</RootNamespace>
+    <AssemblyName>Car_rental_system</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Bevel-And-Emboss-Car-Car-orange.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addBooking.Designer.cs">
+      <DependentUpon>addBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addBookingByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addBookingByUser.Designer.cs">
+      <DependentUpon>addBookingByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCar.Designer.cs">
+      <DependentUpon>addCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCustomerByHimself.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomerByHimself.Designer.cs">
+      <DependentUpon>addCustomerByHimself.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForBooking.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetForBooking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForCars.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetForCars.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetForCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetForCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSettypeofcar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSettypeofcar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="deleteBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteBooking.Designer.cs">
+      <DependentUpon>deleteBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteCar.Designer.cs">
+      <DependentUpon>deleteCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listOfAllBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listOfAllBooking.Designer.cs">
+      <DependentUpon>listOfAllBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listOfAllCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listOfAllCar.Designer.cs">
+      <DependentUpon>listOfAllCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listOfAllCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listOfAllCustomers.Designer.cs">
+      <DependentUpon>listOfAllCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OOP_ADMIN.cs" />
+    <Compile Include="OOP_BOOKING.cs" />
+    <Compile Include="OOP_CAR.cs" />
+    <Compile Include="OOP_PERSON.cs" />
+    <Compile Include="OOP_CUSTOMER.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportOfAllBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportOfAllBooking.Designer.cs">
+      <DependentUpon>reportOfAllBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportOfAllCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportOfAllCars.Designer.cs">
+      <DependentUpon>reportOfAllCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportOfAllCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportOfAllCustomers.Designer.cs">
+      <DependentUpon>reportOfAllCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchBooking.Designer.cs">
+      <DependentUpon>searchBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchCar.Designer.cs">
+      <DependentUpon>searchCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchCustomer.Designer.cs">
+      <DependentUpon>searchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAdminInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAdminInformation.Designer.cs">
+      <DependentUpon>UpdateAdminInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateBooking.Designer.cs">
+      <DependentUpon>updateBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateBookingByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateBookingByUser.Designer.cs">
+      <DependentUpon>updateBookingByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateCar.Designer.cs">
+      <DependentUpon>updateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateCustomer.Designer.cs">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateCustomerByHimself.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateCustomerByHimself.Designer.cs">
+      <DependentUpon>updateCustomerByHimself.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addBooking.resx">
+      <DependentUpon>addBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addBookingByUser.resx">
+      <DependentUpon>addBookingByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCar.resx">
+      <DependentUpon>addCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCustomerByHimself.resx">
+      <DependentUpon>addCustomerByHimself.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteBooking.resx">
+      <DependentUpon>deleteBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteCar.resx">
+      <DependentUpon>deleteCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listOfAllBooking.resx">
+      <DependentUpon>listOfAllBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listOfAllCar.resx">
+      <DependentUpon>listOfAllCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listOfAllCustomers.resx">
+      <DependentUpon>listOfAllCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="reportOfAllBooking.resx">
+      <DependentUpon>reportOfAllBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportOfAllCars.resx">
+      <DependentUpon>reportOfAllCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportOfAllCustomers.resx">
+      <DependentUpon>reportOfAllCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchBooking.resx">
+      <DependentUpon>searchBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchCar.resx">
+      <DependentUpon>searchCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchCustomer.resx">
+      <DependentUpon>searchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAdminInformation.resx">
+      <DependentUpon>UpdateAdminInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateBooking.resx">
+      <DependentUpon>updateBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateBookingByUser.resx">
+      <DependentUpon>updateBookingByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCar.resx">
+      <DependentUpon>updateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCustomer.resx">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCustomerByHimself.resx">
+      <DependentUpon>updateCustomerByHimself.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetForBooking.xsc">
+      <DependentUpon>DataSetForBooking.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForBooking.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetForBooking.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForBooking.xss">
+      <DependentUpon>DataSetForBooking.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForCars.xsc">
+      <DependentUpon>DataSetForCars.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForCars.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetForCars.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForCars.xss">
+      <DependentUpon>DataSetForCars.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForCustomer.xsc">
+      <DependentUpon>DataSetForCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetForCustomer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetForCustomer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetForCustomer.xss">
+      <DependentUpon>DataSetForCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSettypeofcar.xsc">
+      <DependentUpon>DataSettypeofcar.xsd</DependentUpon>
+    </None>
+    <None Include="DataSettypeofcar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSettypeofcar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSettypeofcar.xss">
+      <DependentUpon>DataSettypeofcar.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bevel-And-Emboss-Car-Car-orange.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
